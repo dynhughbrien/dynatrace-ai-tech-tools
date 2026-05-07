@@ -1,8 +1,13 @@
-# dynatrace-ai-se-project
+# Bring Your Own AI or Bring Your Keys 
+
 
 Dynatrace AI Resource for Sales Engineers — a curated guide covering the key Dynatrace + AI GitHub projects, `dtctl` setup, LLM API configuration, GitHub CLI workflows, and recommended AI command-line tools.
 
 ---
+## AI Platform or Local LLM 
+
+
+
 
 ## Table of Contents
 
