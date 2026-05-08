@@ -2,8 +2,7 @@
 
 ## Bring Your Own AI or Bring Your Keys 
 
-Dynatrace AI Resource for Sales Engineers — a curated guide covering the key Dynatrace + AI GitHub projects
-
+Dynatrace AI Resource for Operations — a curated guide covering the key Dynatrace + AI GitHub projects
 
 ## Getting Started
 You will need a few core tools to get the most out of AI-assisted development and observability workflows with Dynatrace:
