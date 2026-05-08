@@ -1,13 +1,23 @@
 # Bring Your Own AI or Bring Your Keys 
 
-
 Dynatrace AI Resource for Sales Engineers — a curated guide covering the key Dynatrace + AI GitHub projects, `dtctl` setup, LLM API configuration, GitHub CLI workflows, and recommended AI command-line tools.
 
----
+What is core set of tools needed for making the most out of AI 
+
+AI Command Line Tool - 
+- claude
+- copilot
+- opencode
+
+AI Platform or Local LLM 
+- Github Copilot
+- Claude 
+
+Dynatrace DTCL 
+
+
+
 ## AI Platform or Local LLM 
-
-
-
 
 ## Table of Contents
 
