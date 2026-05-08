@@ -4,7 +4,11 @@ Dynatrace AI Resource for Sales Engineers — a curated guide covering the key D
 
 What is core set of tools needed for making the most out of AI 
 
-AI Command Line Tool - 
+Dynatrace MCP and DTCL 
+- [`dtctl`](https://github.com/dynatrace-oss/dtctl)
+- [Dynatrace MCP](https://github.com/dynatrace-oss/dynatrace-mcp)
+
+AI Command Line Tool 
 - claude
 - copilot
 - opencode
@@ -13,7 +17,7 @@ AI Platform or Local LLM
 - Github Copilot
 - Claude 
 
-Dynatrace DTCL 
+ 
 
 
 
