@@ -69,25 +69,6 @@ gh copilot explain "awk '{print $2}' access.log | sort | uniq -c | sort -rn | he
 **Best for:** Shell command discovery, quick Git explanations, inline help while working in the terminal.
 Requires a GitHub Copilot subscription.
 
----
-
-### opencode
-
-**[opencode](https://opencode.ai)** — An open-source, terminal-based AI coding assistant that supports multiple LLM providers (OpenAI, Anthropic, Google, AWS Bedrock, Ollama, and more).
-
-```bash
-# Install
-npm install -g opencode-ai
-
-# Launch interactive session
-opencode
-
-# Specify a model
-opencode --model anthropic/claude-sonnet-4-5
-```
-
-**Best for:** Teams wanting provider flexibility, local LLM support, or an open-source alternative to proprietary tools.
-Supports `API_URL` / `API_KEY` for any OpenAI-compatible endpoint.
 
 
 
