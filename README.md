@@ -19,9 +19,6 @@ AI Platform or Local LLM
 - Github Copilot
 - Claude 
 
- 
-
-
 
 ## AI Platform or Local LLM 
 
@@ -35,46 +32,13 @@ AI Platform or Local LLM
 
 ---
 
-## Related GitHub Projects (virtualrussel)
-
-The following public GitHub projects from [@virtualrussel](https://github.com/virtualrussel) combine Dynatrace observability with AI/LLM tooling:
-
-### 1. [dynatrace-se-ai-workspace](https://github.com/virtualrussel/dynatrace-se-ai-workspace)
-
-> Dynatrace AI workspace — Skills, prompts, MCP config, and Copilot instructions for observability investigations
-
-An AI-powered observability workspace for Dynatrace that combines GitHub Copilot or Claude AI, the Dynatrace MCP server, `dtctl`, and the [dynatrace-for-ai](https://github.com/Dynatrace/dynatrace-for-ai) skills framework. Pre-configured for the shared Dynatrace demo environment (`guu84124.apps.dynatrace.com`).
-
-**Key features:**
-- 13 Dynatrace domain skills (DQL, problems, logs, tracing, services, Kubernetes, AWS, etc.)
-- 7 pre-built investigation prompt workflows (health-check, daily-standup, incident-response, etc.)
-- Dual MCP server support (production + sprint tenants)
-- Works with both GitHub Copilot and Claude Code
-
-```bash
-git clone https://github.com/virtualrussel/dynatrace-se-ai-workspace.git
-cd dynatrace-se-ai-workspace
-```
-
-### 2. [dynatrace-ai-dtctl-workspace](https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace)
-
-> Dynatrace AI workspace — Skills, prompts, MCP config, and Copilot instructions for observability investigations (dtctl-focused variant)
-
-A workspace variant that emphasises `dtctl` integration — the kubectl-style Dynatrace CLI — alongside GitHub Copilot or Claude AI for terminal-level observability workflows.
-
-**Key features:**
-- Same 13 Dynatrace domain skills and 7 investigation prompts
-- dtctl skill for managing Dynatrace resources directly from the terminal
-- Structured for use with a single configurable tenant ID
-
-```bash
-git clone https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace.git
-cd dynatrace-ai-dtctl-workspace
-```
-
----
-
-## Dynatrace dtctl Installation
+ ## Related GitHub Projects (virtualrussel)
+ 
+ The following public GitHub projects from [@virtualrussel](https://github.com/virtualrussel) combine Dynatrace observability with AI/LLM tooling:
+ 
+ 
+ 
+ ## Dynatrace dtctl Installation
 
 [`dtctl`](https://github.com/dynatrace-oss/dtctl) is a kubectl-style CLI for Dynatrace that gives terminal-level access to DQL queries, workflows, notebooks, and more. It is required by both workspaces above. Use v0.27.0 or newer.
 
@@ -447,6 +411,41 @@ Set `GEMINI_API_KEY` or authenticate via `gcloud auth`.
 | [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Gemini (Google) | ✅ | ❌ | ✅ (free tier) |
 
 ---
+
+### 1. [dynatrace-se-ai-workspace](https://github.com/virtualrussel/dynatrace-se-ai-workspace)
+ 
+ > Dynatrace AI workspace — Skills, prompts, MCP config, and Copilot instructions for observability investigations
+ 
+ An AI-powered observability workspace for Dynatrace that combines GitHub Copilot or Claude AI, the Dynatrace MCP server, `dtctl`, and the [dynatrace-for-ai](https://github.com/Dynatrace/dynatrace-for-ai) skills framework. Pre-configured for the shared Dynatrace demo environment (`guu84124.apps.dynatrace.com`).
+ 
+ **Key features:**
+ - 13 Dynatrace domain skills (DQL, problems, logs, tracing, services, Kubernetes, AWS, etc.)
+ - 7 pre-built investigation prompt workflows (health-check, daily-standup, incident-response, etc.)
+ - Dual MCP server support (production + sprint tenants)
+ - Works with both GitHub Copilot and Claude Code
+ 
+ ```bash
+ git clone https://github.com/virtualrussel/dynatrace-se-ai-workspace.git
+ cd dynatrace-se-ai-workspace
+ ```
+ 
+ ### 2. [dynatrace-ai-dtctl-workspace](https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace)
+ 
+ > Dynatrace AI workspace — Skills, prompts, MCP config, and Copilot instructions for observability investigations (dtctl-focused variant)
+ 
+ A workspace variant that emphasises `dtctl` integration — the kubectl-style Dynatrace CLI — alongside GitHub Copilot or Claude AI for terminal-level observability workflows.
+ 
+ **Key features:**
+ - Same 13 Dynatrace domain skills and 7 investigation prompts
+ - dtctl skill for managing Dynatrace resources directly from the terminal
+ - Structured for use with a single configurable tenant ID
+ 
+ ```bash
+ git clone https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace.git
+ cd dynatrace-ai-dtctl-workspace
+ ```
+ 
+ ---
 
 ## Related Resources
 
