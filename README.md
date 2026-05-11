@@ -1,132 +1,173 @@
-# Dynatrace AI Tech Tools 
+# Dynatrace AI Tech Tools
 
-## Bring Your Own AI or Bring Your Keys 
+A curated setup guide for Sales Engineers combining Dynatrace observability with AI tooling.
 
-Dynatrace AI Resource for Operations — a curated guide covering the key Dynatrace + AI GitHub projects
+---
 
-## Getting Started
-You will need a few core tools to get the most out of AI-assisted development and observability workflows with Dynatrace:
+## Step 1 — Choose Your AI Platform
 
-* AI Command Line Tool (e.g. Claude Code, GitHub Copilot CLI, opencode) for terminal-based AI interactions and code generation.
-* AI Platform or Local LLM (e.g. OpenAI API, Anthropic Claude, local Ollama instance) 
-* Dynatrace DTCTL https://github.com/dynatrace-oss/dtctl
-* AI Skills  - https://skills.sh/dynatrace/dynatrace-for-ai / https://github.com/Dynatrace/dynatrace-for-ai
-* Dynatace MCP Server  https://github.com/dynatrace-oss/dynatrace-mcp
-* Github git and gh 
+Select an AI provider. You'll need API access or a subscription to use AI command-line tools.
 
-What is core set of tools needed for making the most out of AI 
+| Provider | Free Tier | Notes |
+|---|---|---|
+| [Anthropic Claude](https://claude.ai) | ❌ (Pro required) | Best integration with Claude Code |
+| [OpenAI](https://platform.openai.com) | Limited | Works with opencode, aider |
+| [Google Gemini](https://aistudio.google.com) | ✅ | Works with Gemini CLI |
+| [Ollama (local)](https://ollama.com) | ✅ | Fully local, no API key needed |
 
-### Choice of AI Command Line Tool and LLM
-The following are the tools i use on a daily basis for AI-assisted development and observability workflows with Dynatrace. 
-You can choose the ones that best fit your needs and preferences:
+---
 
-Dynatrace MCP and DTCL 
-- [`dtctl`](https://github.com/dynatrace-oss/dtctl)
+## Step 2 — Choose Your AI Command-Line Tool
 
-AI Command Line Tool 
-- claude
-
-## Recommended AI Command-Line Tools
-
-The following tools are well-suited for AI-assisted development directly from the terminal or editor. All work well alongside Dynatrace observability workflows.
+Pick the tool that fits your AI platform and workflow.
 
 ### ⭐ Claude Code (Recommended)
 
-**[Claude Code](https://claude.ai/code)** — Anthropic's agentic AI coding tool. Runs in the terminal and operates autonomously across your codebase: reads files, runs commands, writes and edits code, and manages git workflows.
+Anthropic's agentic coding tool. Reads files, runs commands, writes code, and manages git workflows autonomously.
 
 ```bash
-# Install
 npm install -g @anthropic-ai/claude-code
-
-# Launch in current directory
 claude
-
-# Run with a task
-claude "investigate why the checkout service error rate increased after the last deploy"
 ```
 
-**Best for:** Deep codebase investigation, multi-file refactors, incident triage with Dynatrace MCP integration.
-Requires a Claude Pro or Team subscription (or direct API key via `ANTHROPIC_API_KEY`).
+Requires a Claude Pro/Team subscription or `ANTHROPIC_API_KEY`.
 
----
+### GitHub Copilot CLI
 
-### ⭐ GitHub Copilot CLI
-
-**[GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli)** — AI assistance for shell commands and Git operations, integrated with the `gh` CLI.
+AI assistance for shell commands and Git operations via the `gh` CLI.
 
 ```bash
-# Install
 gh extension install github/gh-copilot
-
-# Suggest a shell command
 gh copilot suggest "compress all png files in a directory"
-
-# Explain an existing command
-gh copilot explain "awk '{print $2}' access.log | sort | uniq -c | sort -rn | head"
 ```
 
-**Best for:** Shell command discovery, quick Git explanations, inline help while working in the terminal.
 Requires a GitHub Copilot subscription.
 
+<<<<<<< HEAD
+=======
+### opencode
 
+Open-source terminal AI assistant supporting multiple LLM providers (OpenAI, Anthropic, Google, AWS Bedrock, Ollama).
 
+```bash
+npm install -g opencode-ai
+opencode
+```
 
-**Best for:** Iterative code changes with automatic git commits, working with local or private LLMs.
+### Gemini CLI
+>>>>>>> 0c62835 (Restructure README into 8-step setup guide)
 
-### Summary Comparison
+Google's open-source CLI with a generous free tier.
 
-| Tool | Primary LLM | Open Source | Local LLM support | Free tier |
+```bash
+npm install -g @google/gemini-cli
+gemini
+```
+
+### Summary
+
+| Tool | Primary LLM | Open Source | Local LLM | Free Tier |
 |---|---|---|---|---|
-| [Claude Code](https://claude.ai/code) | Claude (Anthropic) | ❌ | ❌ | ❌ (Pro required) |
-| [GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli) | GPT / Claude | ❌ | ❌ | ❌ (subscription) |
-| [opencode](https://opencode.ai) | Any (pluggable) | ✅ | ✅ (Ollama) | ✅ (with free providers) |
-| [aider](https://aider.chat) | Any (pluggable) | ✅ | ✅ (Ollama) | ✅ (with free providers) |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Gemini (Google) | ✅ | ❌ | ✅ (free tier) |
+| [Claude Code](https://claude.ai/code) | Claude | ❌ | ❌ | ❌ |
+| [GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli) | GPT / Claude | ❌ | ❌ | ❌ |
+| [opencode](https://opencode.ai) | Any (pluggable) | ✅ | ✅ | ✅ |
+| [aider](https://aider.chat) | Any (pluggable) | ✅ | ✅ | ✅ |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Gemini | ✅ | ❌ | ✅ |
 
 ---
-## Related GitHub Projects (virtualrussel)
- 
- The following public GitHub projects from [@virtualrussel](https://github.com/virtualrussel) combine Dynatrace observability with AI/LLM tooling:
 
-### 1. [dynatrace-se-ai-workspace](https://github.com/virtualrussel/dynatrace-se-ai-workspace)
- 
- > Dynatrace AI workspace — Skills, prompts, MCP config, and Copilot instructions for observability investigations
- 
- An AI-powered observability workspace for Dynatrace that combines GitHub Copilot or Claude AI, the Dynatrace MCP server, `dtctl`, and the [dynatrace-for-ai](https://github.com/Dynatrace/dynatrace-for-ai) skills framework. Pre-configured for the shared Dynatrace demo environment (`guu84124.apps.dynatrace.com`).
- 
- **Key features:**
- - 13 Dynatrace domain skills (DQL, problems, logs, tracing, services, Kubernetes, AWS, etc.)
- - 7 pre-built investigation prompt workflows (health-check, daily-standup, incident-response, etc.)
- - Dual MCP server support (production + sprint tenants)
- - Works with both GitHub Copilot and Claude Code
- 
- ```bash
- git clone https://github.com/virtualrussel/dynatrace-se-ai-workspace.git
- cd dynatrace-se-ai-workspace
- ```
- 
- ### 2. [dynatrace-ai-dtctl-workspace](https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace)
- 
- > Dynatrace AI workspace — Skills, prompts, MCP config, and Copilot instructions for observability investigations (dtctl-focused variant)
- 
- A workspace variant that emphasises `dtctl` integration — the kubectl-style Dynatrace CLI — alongside GitHub Copilot or Claude AI for terminal-level observability workflows.
- 
- **Key features:**
- - Same 13 Dynatrace domain skills and 7 investigation prompts
- - dtctl skill for managing Dynatrace resources directly from the terminal
- - Structured for use with a single configurable tenant ID
- 
- ```bash
- git clone https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace.git
- cd dynatrace-ai-dtctl-workspace
- ```
- ---
+## Step 3 — Install Dynatrace dtctl
+
+`dtctl` is the kubectl-style CLI for Dynatrace — manages resources from the terminal and integrates with AI agents.
+
+```bash
+# macOS (Homebrew)
+brew install dynatrace-oss/tap/dtctl
+
+# Or download directly
+curl -fsSL https://github.com/dynatrace-oss/dtctl/releases/latest/download/install.sh | sh
+```
+
+More info: [github.com/dynatrace-oss/dtctl](https://github.com/dynatrace-oss/dtctl)
+
+---
+
+## Step 4 — Log In to Dynatrace via dtctl
+
+```bash
+# Configure your Dynatrace tenant
+dtctl config set-tenant <your-tenant-id>.apps.dynatrace.com
+
+# Authenticate (opens browser for SSO)
+dtctl auth login
+
+# Verify connection
+dtctl get problems
+```
+
+---
+
+## Step 5 — Install Dynatrace AI Skills
+
+Dynatrace skills provide structured domain knowledge for AI agents (DQL, problems, logs, tracing, Kubernetes, AWS, etc.).
+
+```bash
+git clone https://github.com/Dynatrace/dynatrace-for-ai.git
+```
+
+Or use a pre-configured workspace that includes skills, prompts, and MCP config:
+
+```bash
+# With MCP server support
+git clone https://github.com/virtualrussel/dynatrace-se-ai-workspace.git
+
+# dtctl-focused variant
+git clone https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace.git
+```
+
+More info: [skills.sh/dynatrace](https://skills.sh/dynatrace/dynatrace-for-ai)
+
+---
+
+## Step 6 — Create a GitHub Account
+
+If you don't already have one, create a free GitHub account at [github.com/signup](https://github.com/signup).
+
+---
+
+## Step 7 — Install GitHub CLI (gh)
+
+The `gh` CLI is required for GitHub Copilot CLI and useful for AI-assisted git workflows.
+
+```bash
+# macOS (Homebrew)
+brew install gh
+
+# Windows (winget)
+winget install GitHub.cli
+```
+
+More info: [cli.github.com](https://cli.github.com)
+
+---
+
+## Step 8 — Authenticate with gh
+
+```bash
+# Interactive login (opens browser)
+gh auth login
+
+# Verify
+gh auth status
+```
+
+---
 
 ## Related Resources
 
 - [virtualrussel/dynatrace-se-ai-workspace](https://github.com/virtualrussel/dynatrace-se-ai-workspace) — SE demo workspace with MCP + skills + prompts
 - [virtualrussel/dynatrace-ai-dtctl-workspace](https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace) — dtctl-focused AI workspace
-- [Dynatrace/dynatrace-for-ai](https://github.com/Dynatrace/dynatrace-for-ai) — Official Dynatrace skills and prompts source
+- [Dynatrace/dynatrace-for-ai](https://github.com/Dynatrace/dynatrace-for-ai) — Official Dynatrace skills and prompts
 - [dynatrace-oss/dtctl](https://github.com/dynatrace-oss/dtctl) — Dynatrace CLI for humans and AI agents
 - [Dynatrace MCP Server docs](https://docs.dynatrace.com/docs/shortlink/dynatrace-mcp-server) — Official MCP server documentation
 - [Agent Skills specification](https://agentskills.io) — Open standard for AI skill files
