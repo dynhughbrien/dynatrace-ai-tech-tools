@@ -43,8 +43,6 @@ gh copilot suggest "compress all png files in a directory"
 
 Requires a GitHub Copilot subscription.
 
-
-=======
 ### opencode
 
 Open-source terminal AI assistant supporting multiple LLM providers (OpenAI, Anthropic, Google, AWS Bedrock, Ollama).
