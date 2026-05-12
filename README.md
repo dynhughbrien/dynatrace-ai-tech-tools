@@ -43,7 +43,7 @@ gh copilot suggest "compress all png files in a directory"
 
 Requires a GitHub Copilot subscription.
 
-<<<<<<< HEAD
+
 =======
 ### opencode
 
@@ -55,7 +55,6 @@ opencode
 ```
 
 ### Gemini CLI
->>>>>>> 0c62835 (Restructure README into 8-step setup guide)
 
 Google's open-source CLI with a generous free tier.
 
