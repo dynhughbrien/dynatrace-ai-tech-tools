@@ -1,5 +1,18 @@
 # Dynatrace AI Tech Tools
 
+## Quick Start Steps
+
+1. Choose an AI platform.
+2. Choose an AI command-line tool.
+3. Install Dynatrace `dtctl`.
+4. Log in to Dynatrace with `dtctl`.
+5. Install Dynatrace AI Skills.
+6. Create a GitHub account.
+7. Install GitHub CLI (`gh`).
+8. Authenticate with `gh`.
+
+In short: pick your AI stack, install the Dynatrace tools and skills, then set up GitHub CLI access.
+
 A curated setup guide for Sales Engineers combining Dynatrace observability with AI tooling.
 
 Dynatrace + AI Platform + Command Line Tool + Dynatrace Skills and Optional GitHub is a GREAT starting point getting the most of the Dynatrace Data / Grail.  
