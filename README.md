@@ -132,10 +132,10 @@ dtctl get problems
 
 Dynatrace skills provide structured domain knowledge for AI agents (DQL, problems, logs, tracing, Kubernetes, AWS, etc.).
 
-```bash
-git clone https://github.com/Dynatrace/dynatrace-for-ai.git
-```
 
+```bash
+npx skills add dynatrace/dynatrace-for-ai
+```
 Or use a pre-configured workspace that includes skills, prompts, and MCP config:
 
 ```bash
