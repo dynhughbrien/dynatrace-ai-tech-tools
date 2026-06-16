@@ -106,6 +106,13 @@ More info: [github.com/dynatrace-oss/dtctl](https://github.com/dynatrace-oss/dtc
 
 ---
 
+## Step 3a Install the dtctl Skill
+
+```
+dtctl skills  install --for claude 
+```
+
+
 ## Step 4 — Log In to Dynatrace via dtctl
 
 ```bash
