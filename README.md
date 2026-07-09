@@ -101,6 +101,8 @@ git clone https://github.com/virtualrussel/dynatrace-se-ai-workspace.git
 git clone https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace.git
 ```
 
+---
+
 ## Step 7 
 
 - Install Claude
