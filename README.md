@@ -34,7 +34,12 @@ npm install -g @anthropic-ai/claude-code
 claude
 ```
 
-Requires a Claude Pro/Team subscription or `ANTHROPIC_API_KEY`.
+```bash
+brew install claude-code 
+claude
+```
+
+
 
 ---
 
@@ -81,7 +86,7 @@ More info: [skills.sh/dynatrace](https://skills.sh/dynatrace/dynatrace-for-ai)
 
 Dynatrace skills provide structured domain knowledge for AI agents (DQL, problems, logs, tracing, Kubernetes, AWS, etc.).
 
-AI Skills.sh()
+
 
 ```bash
 npx skills add dynatrace/dynatrace-for-ai
@@ -95,6 +100,16 @@ git clone https://github.com/virtualrussel/dynatrace-se-ai-workspace.git
 # dtctl-focused variant
 git clone https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace.git
 ```
+
+## Step 7 
+
+- Install Claude
+- Install dtctl
+- Install dtctl Skill
+- Install Dynatrace Skills
+- Run Claude
+- - /login
+- - /init 
 
 
 ---
