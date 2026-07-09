@@ -108,8 +108,8 @@ git clone https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace.git
 - Install dtctl Skill
 - Install Dynatrace Skills
 - Run Claude
-- - /login
-- - /init 
+- /login
+- /init 
 
 
 ---
