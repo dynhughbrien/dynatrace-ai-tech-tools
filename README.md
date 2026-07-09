@@ -1,16 +1,6 @@
 # Dynatrace AI Tech Tools
 
 ## Quick Start Steps
-
-1. Choose an AI platform.
-2. Choose an AI command-line tool.
-3. Install Dynatrace `dtctl`.
-4. Log in to Dynatrace with `dtctl`.
-5. Install Dynatrace AI Skills.
-6. Create a GitHub account.
-7. Install GitHub CLI (`gh`).
-8. Authenticate with `gh`.
-
 In short: pick your AI stack, install the Dynatrace tools and skills, then set up GitHub CLI access.
 
 A curated setup guide for Sales Engineers combining Dynatrace observability with AI tooling.
@@ -28,9 +18,6 @@ Select an AI provider. You'll need API access or a subscription to use AI comman
 | Provider | Free Tier | Notes |
 |---|---|---|
 | [Anthropic Claude](https://claude.ai) | ❌ (Pro required) | Best integration with Claude Code |
-| [OpenAI](https://platform.openai.com) | Limited | Works with opencode, aider |
-| [Google Gemini](https://aistudio.google.com) | ✅ | Works with Gemini CLI |
-| [Ollama (local)](https://ollama.com) | ✅ | Fully local, no API key needed |
 
 ---
 
@@ -48,45 +35,6 @@ claude
 ```
 
 Requires a Claude Pro/Team subscription or `ANTHROPIC_API_KEY`.
-
-### GitHub Copilot CLI
-
-AI assistance for shell commands and Git operations via the `gh` CLI.
-
-```bash
-gh extension install github/gh-copilot
-gh copilot suggest "compress all png files in a directory"
-```
-
-Requires a GitHub Copilot subscription.
-
-### opencode
-
-Open-source terminal AI assistant supporting multiple LLM providers (OpenAI, Anthropic, Google, AWS Bedrock, Ollama).
-
-```bash
-npm install -g opencode-ai
-opencode
-```
-
-### Gemini CLI
-
-Google's open-source CLI with a generous free tier.
-
-```bash
-npm install -g @google/gemini-cli
-gemini
-```
-
-### Summary
-
-| Tool | Primary LLM | Open Source | Local LLM | Free Tier |
-|---|---|---|---|---|
-| [Claude Code](https://claude.ai/code) | Claude | ❌ | ❌ | ❌ |
-| [GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli) | GPT / Claude | ❌ | ❌ | ❌ |
-| [opencode](https://opencode.ai) | Any (pluggable) | ✅ | ✅ | ✅ |
-| [aider](https://aider.chat) | Any (pluggable) | ✅ | ✅ | ✅ |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Gemini | ✅ | ❌ | ✅ |
 
 ---
 
@@ -106,14 +54,14 @@ More info: [github.com/dynatrace-oss/dtctl](https://github.com/dynatrace-oss/dtc
 
 ---
 
-## Step 3a Install the dtctl Skill
+## Step 4 Install the dtctl Skill
 
 ```
 dtctl skills  install --for claude 
 ```
 
 
-## Step 4 — Log In to Dynatrace via dtctl
+## Step 5 — Log In to Dynatrace via dtctl
 
 ```bash
 # Configure your Dynatrace tenant
@@ -125,13 +73,15 @@ dtctl auth login
 # Verify connection
 dtctl get problems
 ```
+More info: [skills.sh/dynatrace](https://skills.sh/dynatrace/dynatrace-for-ai)
 
 ---
 
-## Step 5 — Install Dynatrace AI Skills
+## Step 6 — Install Dynatrace AI Skills
 
 Dynatrace skills provide structured domain knowledge for AI agents (DQL, problems, logs, tracing, Kubernetes, AWS, etc.).
 
+AI Skills.sh()
 
 ```bash
 npx skills add dynatrace/dynatrace-for-ai
@@ -146,41 +96,6 @@ git clone https://github.com/virtualrussel/dynatrace-se-ai-workspace.git
 git clone https://github.com/virtualrussel/dynatrace-ai-dtctl-workspace.git
 ```
 
-More info: [skills.sh/dynatrace](https://skills.sh/dynatrace/dynatrace-for-ai)
-
----
-
-## Step 6 — Create a GitHub Account
-
-If you don't already have one, create a free GitHub account at [github.com/signup](https://github.com/signup).
-
----
-
-## Step 7 — Install GitHub CLI (gh)
-
-The `gh` CLI is required for GitHub Copilot CLI and useful for AI-assisted git workflows.
-
-```bash
-# macOS (Homebrew)
-brew install gh
-
-# Windows (winget)
-winget install GitHub.cli
-```
-
-More info: [cli.github.com](https://cli.github.com)
-
----
-
-## Step 8 — Authenticate with gh
-
-```bash
-# Interactive login (opens browser)
-gh auth login
-
-# Verify
-gh auth status
-```
 
 ---
 
