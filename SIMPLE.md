@@ -1,16 +1,14 @@
 # Dynatrace AI Tech Tools
 
 ## Quick Start Steps
-In short: pick your AI stack, install the Dynatrace tools and skills, then set up GitHub CLI access.
 
-A curated setup guide for Sales Engineers combining Dynatrace observability with AI tooling.
+A curated setup guide for combining Dynatrace observability with AI tooling.
 
 Dynatrace + AI Platform + Command Line Tool + Dynatrace Skills and Optional GitHub is a GREAT starting point getting the most of the Dynatrace Data / Grail.  
 
 The goal is to proivde simplified access to ALL the Dynatrace Data. 
 
 ---
-
 
 ## Step 1 — Choose Your AI Command-Line Tool
 
